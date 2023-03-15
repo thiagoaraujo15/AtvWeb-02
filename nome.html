@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divisor de nomes</title>
+    <style>
+        button{
+            background-color: blue;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+	<label for="nome-completo">Nome completo:</label><br>
+	<input type="text" id="nome-completo">
+	<button onclick="dividirNomeSobrenome()">>></button><br>
+	<label for="nome">Nome:</label><br>
+	<input type="text" id="nome"><br>
+	<label for="sobrenome">Sobrenome:</label><br>
+	<input type="text" id="sobrenome">
+	
+	<script>
+		function dividirNomeSobrenome() {
+			var nomeCompleto = document.getElementById("nome-completo").value;
+			var nome = nomeCompleto.split(" ")[0];
+			var sobrenome = nomeCompleto.split(" ")[1];
+			document.getElementById("nome").value = nome;
+			document.getElementById("sobrenome").value = sobrenome;
+		}
+	</script>
+</body>
+</html>
